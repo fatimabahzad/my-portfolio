@@ -1,0 +1,199 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #0f0f0f;
+  color: #e0e0e0;
+}
+
+/* NAV */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 3rem;
+  background: #0f0f0f;
+  border-bottom: 1px solid #2a2a2a;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav h1 {
+  color: #c084fc;
+  font-size: 1.3rem;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #e0e0e0;
+  font-size: 0.95rem;
+  transition: color 0.2s;
+}
+
+nav a:hover {
+  color: #c084fc;
+}
+
+/* HERO */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 7rem 2rem;
+  background: #0f0f0f;
+}
+
+.hero-greeting {
+  color: #a0a0a0;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-name {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.hero-title {
+  font-size: 1.4rem;
+  color: #c084fc;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.hero-sub {
+  color: #a0a0a0;
+  font-size: 1rem;
+  max-width: 500px;
+  margin-bottom: 2rem;
+}
+
+.hero-btn {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  border: 2px solid #c084fc;
+  color: #c084fc;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  transition: background 0.2s, color 0.2s;
+}
+
+.hero-btn:hover {
+  background: #c084fc;
+  color: #0f0f0f;
+}
+
+/* MAIN */
+main {
+  max-width: 900px;
+  margin: auto;
+  padding: 3rem 2rem;
+}
+
+section {
+  margin-bottom: 4rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+  color: white;
+  margin-bottom: 1rem;
+  border-left: 4px solid #c084fc;
+  padding-left: 0.75rem;
+}
+
+/* SKILLS */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1.2rem;
+}
+
+.skill-tag {
+  background: #1e1e1e;
+  border: 1px solid #c084fc;
+  color: #c084fc;
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+}
+
+/* CARDS */
+.card {
+  background: #1a1a1a;
+  padding: 1.5rem;
+  margin-top: 1rem;
+  border-radius: 12px;
+  border: 1px solid #2a2a2a;
+  transition: border-color 0.2s;
+}
+
+.card:hover {
+  border-color: #c084fc;
+}
+
+.card h3 {
+  color: white;
+  margin-bottom: 0.4rem;
+}
+
+.card p {
+  color: #a0a0a0;
+  font-size: 0.95rem;
+}
+
+/* CONTACT */
+#contact p {
+  color: #a0a0a0;
+  margin-top: 0.5rem;
+}
+.card-link {
+  text-decoration: none;
+  display: block;
+}
+.media-heading {
+  color: white;
+  font-size: 1.2rem;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  border: none;
+  padding: 0;
+}
+
+.project-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 0.5rem;
+}
+
+.project-list li {
+  color: #a0a0a0;
+  padding: 0.4rem 0;
+  border-bottom: 1px solid #1e1e1e;
+  padding-left: 1rem;
+  position: relative;
+}
+
+.project-list li::before {
+  content: "→";
+  color: #c084fc;
+  position: absolute;
+  left: 0;
+}
