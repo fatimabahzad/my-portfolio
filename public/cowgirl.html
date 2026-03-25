@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Space Cowgirl | Fatemah Bahzad</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .back-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        color: #a0a0a0;
+        text-decoration: none;
+        font-size: 0.9rem;
+        margin-bottom: 2rem;
+        transition: color 0.2s;
+      }
+      .back-link:hover {
+        color: #c084fc;
+      }
+      .project-hero h1 {
+        font-size: 2.5rem;
+        color: white;
+        margin-bottom: 0.5rem;
+      }
+      .project-hero p.tagline {
+        color: #c084fc;
+        font-size: 1.1rem;
+        margin-bottom: 1.5rem;
+      }
+      .video-wrapper {
+        width: 100%;
+        border-radius: 12px;
+        overflow: hidden;
+        border: 1px solid #2a2a2a;
+        margin-bottom: 2.5rem;
+      }
+      .video-wrapper video {
+        width: 100%;
+        display: block;
+      }
+      .project-section {
+        margin-bottom: 2rem;
+      }
+      .project-section h2 {
+        font-size: 1.3rem;
+        color: white;
+        border-left: 4px solid #c084fc;
+        padding-left: 0.75rem;
+        margin-bottom: 0.75rem;
+      }
+      .project-section p {
+        color: #a0a0a0;
+        line-height: 1.75;
+        font-size: 0.97rem;
+      }
+      .tech-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-top: 0.75rem;
+      }
+      .tech-tag {
+        background: #1e1e1e;
+        border: 1px solid #c084fc;
+        color: #c084fc;
+        padding: 0.35rem 0.9rem;
+        border-radius: 999px;
+        font-size: 0.82rem;
+      }
+      .feature-list {
+        list-style: none;
+        padding: 0;
+        margin-top: 0.75rem;
+      }
+      .feature-list li {
+        color: #a0a0a0;
+        padding: 0.4rem 0 0.4rem 1.2rem;
+        border-bottom: 1px solid #1e1e1e;
+        position: relative;
+        font-size: 0.95rem;
+      }
+      .feature-list li::before {
+        content: "→";
+        color: #c084fc;
+        position: absolute;
+        left: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div style="max-width: 900px; margin: auto; padding: 3rem 2rem;">
+
+        <a href="index.html" class="back-link">← Back to Portfolio</a>
+
+        <div class="project-hero">
+          <h1>2D Space Cowgirl Game</h1>
+          <p class="tagline">Pixel-style hackathon game built with Python and Pygame</p>
+        </div>
+
+        <div class="video-wrapper">
+          <video controls>
+            <source src="Space_CowGirl.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <div class="project-section">
+          <h2>About the Project</h2>
+          <p>
+            Space Cowgirl is a 2D pixel-art game developed during a hackathon. The player
+            controls a cowgirl character navigating a space-western landscape, dodging and
+            catching UFOs while managing a lives system. The game was built entirely from
+            scratch in Python using the Pygame library within the hackathon time limit.
+          </p>
+        </div>
+
+        <div class="project-section">
+          <h2>How It Works</h2>
+          <p>
+            The game loop runs at a fixed frame rate, handling player input, sprite movement,
+            collision detection, and score tracking each frame. UFO enemies spawn at randomized
+            positions and speeds, increasing in difficulty over time. The lives system is
+            represented visually with heart icons on screen, and the catch counter tracks
+            the player's score in real time.
+          </p>
+        </div>
+
+        <div class="project-section">
+          <h2>Technical Details</h2>
+          <ul class="feature-list">
+            <li>Custom sprite rendering and pixel-art assets</li>
+            <li>Real-time collision detection between player and UFO objects</li>
+            <li>Randomized enemy spawning with increa
