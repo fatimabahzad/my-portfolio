@@ -9,8 +9,75 @@
 
       body {
         font-family: Arial, sans-serif;
-        background: #362330;
+        background: #0a0015;
         color: #e0e0e0;
+        overflow-x: hidden;
+      }
+
+      .stars {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background:
+          radial-gradient(ellipse at 20% 50%, #1a0533 0%, transparent 50%),
+          radial-gradient(ellipse at 80% 20%, #0d0a2e 0%, transparent 50%),
+          #0a0015;
+      }
+
+      .stars::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-image:
+          radial-gradient(1px 1px at 10% 15%, white, transparent),
+          radial-gradient(1px 1px at 25% 40%, white, transparent),
+          radial-gradient(1px 1px at 40% 10%, white, transparent),
+          radial-gradient(1px 1px at 55% 60%, white, transparent),
+          radial-gradient(1px 1px at 70% 25%, white, transparent),
+          radial-gradient(1px 1px at 85% 75%, white, transparent),
+          radial-gradient(1px 1px at 15% 70%, white, transparent),
+          radial-gradient(1px 1px at 30% 85%, white, transparent),
+          radial-gradient(1px 1px at 45% 50%, white, transparent),
+          radial-gradient(1px 1px at 60% 35%, white, transparent),
+          radial-gradient(1px 1px at 75% 90%, white, transparent),
+          radial-gradient(1px 1px at 90% 45%, white, transparent),
+          radial-gradient(2px 2px at 5% 30%, #c084fc, transparent),
+          radial-gradient(2px 2px at 50% 80%, #c084fc, transparent),
+          radial-gradient(2px 2px at 95% 10%, #c084fc, transparent),
+          radial-gradient(1.5px 1.5px at 35% 20%, #a78bfa, transparent),
+          radial-gradient(1.5px 1.5px at 65% 55%, #a78bfa, transparent),
+          radial-gradient(1px 1px at 20% 95%, white, transparent),
+          radial-gradient(1px 1px at 80% 5%, white, transparent),
+          radial-gradient(1px 1px at 48% 42%, white, transparent);
+        animation: twinkle 4s infinite alternate;
+      }
+
+      .stars::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-image:
+          radial-gradient(1px 1px at 8% 55%, white, transparent),
+          radial-gradient(1px 1px at 22% 12%, white, transparent),
+          radial-gradient(1px 1px at 38% 78%, white, transparent),
+          radial-gradient(1px 1px at 52% 22%, white, transparent),
+          radial-gradient(1px 1px at 68% 68%, white, transparent),
+          radial-gradient(1px 1px at 82% 38%, white, transparent),
+          radial-gradient(2px 2px at 18% 48%, #e0c3fc, transparent),
+          radial-gradient(2px 2px at 72% 15%, #e0c3fc, transparent),
+          radial-gradient(1px 1px at 92% 82%, white, transparent),
+          radial-gradient(1px 1px at 3% 88%, white, transparent);
+        animation: twinkle 6s infinite alternate-reverse;
+      }
+
+      @keyframes twinkle {
+        0% { opacity: 0.6; }
+        100% { opacity: 1; }
       }
 
       main {
@@ -94,84 +161,4 @@
         list-style: none;
         padding: 0;
         margin-top: 0.75rem;
-      }
-
-      .feature-list li {
-        color: #a0a0a0;
-        padding: 0.4rem 0 0.4rem 1.2rem;
-        border-bottom: 1px solid #1e1e1e;
-        position: relative;
-        font-size: 0.95rem;
-      }
-
-      .feature-list li::before {
-        content: "→";
-        color: #c084fc;
-        position: absolute;
-        left: 0;
-      }
-    </style>
-  </head>
-  <body>
-    <main>
-      <a href="/" class="back-link">← Back to Portfolio</a>
-
-      <div class="project-hero">
-        <h1>2D Space Cowgirl Game</h1>
-        <p class="tagline">Pixel-style hackathon game built with Python and Pygame</p>
-      </div>
-
-      <div class="video-wrapper">
-        <video controls>
-          <source src="Space_CowGirl.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-      </div>
-
-      <div class="project-section">
-        <h2>About the Project</h2>
-        <p>
-          Space Cowgirl is a 2D pixel-art game developed during a hackathon. The player
-          controls a cowgirl character navigating a space-western landscape, dodging and
-          catching UFOs while managing a lives system. The game was built entirely from
-          scratch in Python using the Pygame library within the hackathon time limit.
-        </p>
-      </div>
-
-      <div class="project-section">
-        <h2>How It Works</h2>
-        <p>
-          The game loop runs at a fixed frame rate, handling player input, sprite movement,
-          collision detection, and score tracking each frame. UFO enemies spawn at randomized
-          positions and speeds, increasing in difficulty over time. The lives system is
-          represented visually with heart icons on screen, and the catch counter tracks
-          the player's score in real time.
-        </p>
-      </div>
-
-      <div class="project-section">
-        <h2>Technical Details</h2>
-        <ul class="feature-list">
-          <li>Custom sprite rendering and pixel-art assets</li>
-          <li>Real-time collision detection between player and UFO objects</li>
-          <li>Randomized enemy spawning with increasing difficulty</li>
-          <li>Lives system with on-screen heart display</li>
-          <li>Score counter tracking caught UFOs</li>
-          <li>Scrolling parallax-style background</li>
-        </ul>
-      </div>
-
-      <div class="project-section">
-        <h2>Technologies Used</h2>
-        <div class="tech-tags">
-          <span class="tech-tag">Python</span>
-          <span class="tech-tag">Pygame</span>
-          <span class="tech-tag">Sprite Animation</span>
-          <span class="tech-tag">Collision Detection</span>
-          <span class="tech-tag">Game Loop Architecture</span>
-        </div>
-      </div>
-
-    </main>
-  </body>
-</html>
+       }
