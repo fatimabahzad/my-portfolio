@@ -84,6 +84,8 @@
         max-width: 900px;
         margin: auto;
         padding: 3rem 2rem;
+        position: relative;
+        z-index: 1;
       }
 
       .back-link {
@@ -161,4 +163,85 @@
         list-style: none;
         padding: 0;
         margin-top: 0.75rem;
-       }
+      }
+
+      .feature-list li {
+        color: #a0a0a0;
+        padding: 0.4rem 0 0.4rem 1.2rem;
+        border-bottom: 1px solid #1e1e1e;
+        position: relative;
+        font-size: 0.95rem;
+      }
+
+      .feature-list li::before {
+        content: "→";
+        color: #c084fc;
+        position: absolute;
+        left: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="stars"></div>
+    <main>
+      <a href="/" class="back-link">← Back to Portfolio</a>
+
+      <div class="project-hero">
+        <h1>2D Space Cowgirl Game</h1>
+        <p class="tagline">Pixel-style hackathon game built with Python and Pygame</p>
+      </div>
+
+      <div class="video-wrapper">
+        <video controls>
+          <source src="Space_CowGirl.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+      <div class="project-section">
+        <h2>About the Project</h2>
+        <p>
+          Space Cowgirl is a 2D pixel-art game developed during a hackathon. The player
+          controls a cowgirl character navigating a space-western landscape, dodging and
+          catching UFOs while managing a lives system. The game was built entirely from
+          scratch in Python using the Pygame library within the hackathon time limit.
+        </p>
+      </div>
+
+      <div class="project-section">
+        <h2>How It Works</h2>
+        <p>
+          The game loop runs at a fixed frame rate, handling player input, sprite movement,
+          collision detection, and score tracking each frame. UFO enemies spawn at randomized
+          positions and speeds, increasing in difficulty over time. The lives system is
+          represented visually with heart icons on screen, and the catch counter tracks
+          the player's score in real time.
+        </p>
+      </div>
+
+      <div class="project-section">
+        <h2>Technical Details</h2>
+        <ul class="feature-list">
+          <li>Custom sprite rendering and pixel-art assets</li>
+          <li>Real-time collision detection between player and UFO objects</li>
+          <li>Randomized enemy spawning with increasing difficulty</li>
+          <li>Lives system with on-screen heart display</li>
+          <li>Score counter tracking caught UFOs</li>
+          <li>Scrolling parallax-style background</li>
+        </ul>
+      </div>
+
+      <div class="project-section">
+        <h2>Technologies Used</h2>
+        <div class="tech-tags">
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">Pygame</span>
+          <span class="tech-tag">Sprite Animation</span>
+          <span class="tech-tag">Collision Detection</span>
+          <span class="tech-tag">Game Loop Architecture</span>
+        </div>
+      </div>
+
+    </main>
+  </body>
+</html>
